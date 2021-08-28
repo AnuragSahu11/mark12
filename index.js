@@ -162,6 +162,7 @@ function quiz() {
   });
 
   function clickHandler() {
+    marks = 0;
     myQuestions.forEach((item, i) => {
       const ans = document.getElementsByName(i);
       for (a = 0; a < 4; a++) {
