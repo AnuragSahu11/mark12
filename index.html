@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="quiz">
+    <div class="container has-text-centered">
+      <div class="nav">
+        <nav
+          class="breadcrumb is-centered has-bullet-separator"
+          aria-label="breadcrumbs"
+        >
+          <ul class="is-size-5">
+            <li class="is-active">
+              <a href="./index.html" aria-current="page">Triangle Quiz</a>
+            </li>
+            <li><a href="./area.html">Area</a></li>
+            <li><a href="./triangle.html">Is it Triangle?</a></li>
+            <li><a href="./hypotenuse.html">Hypotenuse</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="quiz"></div>
+      <div class="final_score">
+        <h1
+          class="
+            score_h1
+            is-size-2
+            has-background-primary-light has-text-success
+          "
+        ></h1>
+      </div>
+      <button class="button is-link is-medium score_button">
+        Calculate Score
+      </button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

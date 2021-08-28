@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="triangle">
+    <div class="container">
+      <div class="nav">
+        <nav
+          class="breadcrumb is-centered has-bullet-separator"
+          aria-label="breadcrumbs"
+        >
+          <ul class="is-size-5">
+            <li>
+              <a href="./index.html" aria-current="page">Triangle Quiz</a>
+            </li>
+            <li><a href="./area.html">Area</a></li>
+            <li class="is-active">
+              <a href="./triangle.html">Is it Triangle?</a>
+            </li>
+            <li><a href="./hypotenuse.html">Hypotenuse</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="headings has-text-centered">
+        <h1 class="title is-2">Angle of Triangles</h1>
+        <h2 class="subtitle">
+          Put three angles and find whether they form triangle or not!
+        </h2>
+      </div>
+      <div class="input-angle-div">
+        <input
+          id="input-one"
+          class="input input-angle is-rounded is-info"
+          type="text"
+          placeholder="Angle one"
+        />
+        <input
+          id="input-two"
+          class="input input-angle is-rounded is-info"
+          type="text"
+          placeholder="Angle two"
+        />
+        <input
+          id="input-three"
+          class="input input-angle is-rounded is-info"
+          type="text"
+          placeholder="Angle three"
+        />
+      </div>
+
+      <button class="button buttons is-link is-medium is-rounded">
+        Calculate
+      </button>
+      <div class="final_score-triangle">
+        <h1
+          class="
+            score_h1-a
+            is-size-2
+            has-background-primary-light has-text-success has-text-centered
+          "
+        ></h1>
+        <h1
+          class="
+            score_h1-b
+            is-size-2
+            has-background-danger-light has-text-danger-dark has-text-centered
+          "
+        ></h1>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
