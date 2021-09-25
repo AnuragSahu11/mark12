@@ -23,8 +23,13 @@ function hypotenuse() {
   button.addEventListener("click", () => {
     const s1 = parseInt(a.value);
     const s2 = parseInt(b.value);
-    const result = Math.sqrt(Math.pow(s1, 2) + Math.pow(s2, 2));
-    finalScoreA.innerHTML = `Hypotenuse is ${result.toFixed(2)}`;
+    if (s1 > 0 && s2 > 0) {
+      const result = Math.sqrt(Math.pow(s1, 2) + Math.pow(s2, 2));
+      finalScoreA.innerHTML = `Hypotenuse is ${result.toFixed(2)}`;
+    }
+    else{
+      finalScoreA.innerHTML = `Please enter correct values`;
+    }
   });
 }
 
@@ -63,7 +68,16 @@ function triangle() {
   const finalScoreB = document.querySelector(".score_h1-b");
 
   button.addEventListener("click", () => {
-    if (parseInt(a.value) + parseInt(b.value) + parseInt(c.value) === 180) {
+    let valueA = Number(a.value);
+    let valueB = Number(b.value);
+    let valueC = Number(c.value);
+    if (valueA < 0 || valueB < 0 || valueC < 0) {
+      finalScoreA.innerHTML = ``;
+      finalScoreB.innerHTML = "Enter correct values 😐";
+    } else if (
+      parseInt(a.value) + parseInt(b.value) + parseInt(c.value) ===
+      180
+    ) {
       finalScoreA.innerHTML = `It's a Triangle 🙂`;
       finalScoreB.innerHTML = "";
     } else {
