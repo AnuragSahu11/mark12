@@ -26,9 +26,8 @@ function hypotenuse() {
     if (s1 > 0 && s2 > 0) {
       const result = Math.sqrt(Math.pow(s1, 2) + Math.pow(s2, 2));
       finalScoreA.innerHTML = `Hypotenuse is ${result.toFixed(2)}`;
-    }
-    else{
-      finalScoreA.innerHTML = `Please enter correct values`;
+    } else {
+      finalScoreA.innerHTML = `Please enter proper values 😐`;
     }
   });
 }
@@ -45,16 +44,21 @@ function area() {
     const s1 = parseInt(a.value);
     const s2 = parseInt(b.value);
     const s3 = parseInt(c.value);
+    if ((s1 > 0) & (s2 > 0) & (s3 > 0)) {
+      const p = (s1 + s2 + s3) / 2;
 
-    const p = (s1 + s2 + s3) / 2;
-
-    const result = Math.sqrt(p * (p - s1) * (p - s2) * (p - s3));
-    if (result || result > 0) {
-      finalScoreA.innerHTML = `Area of triangle is ${result.toFixed(2)}`;
-      finalScoreB.innerHTML = "";
-    } else {
+      const result = Math.sqrt(p * (p - s1) * (p - s2) * (p - s3));
+      if (result || result > 0) {
+        finalScoreA.innerHTML = `Area of triangle is ${result.toFixed(2)}`;
+        finalScoreB.innerHTML = "";
+      } else {
+        finalScoreA.innerHTML = ``;
+        finalScoreB.innerHTML = `That is not a Triangle `;
+      }
+    }
+    else{
       finalScoreA.innerHTML = ``;
-      finalScoreB.innerHTML = `That is not a Triangle `;
+        finalScoreB.innerHTML = `Please enter proper values 😐`;
     }
   });
 }
@@ -73,7 +77,7 @@ function triangle() {
     let valueC = Number(c.value);
     if (valueA < 0 || valueB < 0 || valueC < 0) {
       finalScoreA.innerHTML = ``;
-      finalScoreB.innerHTML = "Enter correct values 😐";
+      finalScoreB.innerHTML = "Enter proper values 😐";
     } else if (
       parseInt(a.value) + parseInt(b.value) + parseInt(c.value) ===
       180
